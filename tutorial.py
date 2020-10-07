@@ -70,7 +70,7 @@ def ball_restart():
 # Generates Texts
 def text_generator(text, x, y, fontSize):
     font = pygame.font.Font("freesansbold.ttf", fontSize)
-    text1 = font.render(text, False, white, t_color)
+    text1 = font.render(text, False, t_color, white)
 
     # Centering/Aligning the Text
     text1_width = text1.get_width()
@@ -156,11 +156,11 @@ def tutorial():
                 pygame.quit()
                 quit()
             if event.type == pygame.MOUSEBUTTONDOWN: # click "Start Game" button
-                if screen_width-200 <= mouse[0] <= screen_width - 67 and screen_height -50 <= mouse [1] <= screen_height +15:
+                if 950 <= mouse[0] <= 1083 and 50 <= mouse [1] <= 75:
                     game() # Game is started
                 
         
-        screen.fill(bg_color)
+        screen.fill(white)
         
         # Controls
         text_generator("Controls", 50, 50, 32)
@@ -185,19 +185,21 @@ def tutorial():
         
         # PowerUps
         text_generator("Power Ups", 50, 450, 32)
+        image_generator("pwrup.png", 150, 550)
         text_generator("Power UP - Paddle gets larger", 300, 550, 16)
 
         # Mouse
         mouse = pygame.mouse.get_pos()
-        if screen_width -200 <= mouse[0] <= screen_width - 67 and screen_height -50 <= mouse[1] <= screen_height +15: 
-            pygame.draw.rect(screen,(t_color),[screen_width-200,screen_height-50,153,35])   # hovering around button
+        if 950 <= mouse[0] <= 1083 and 50 <= mouse[1] <= 75: 
+            pygame.draw.rect(screen,(white),[940,40,155,35])   # hovering around button
         else: 
-            pygame.draw.rect(screen,(white),[screen_width-200,screen_height-50,153,35])  # not hovering around button
+            pygame.draw.rect(screen,(t_color),[940,40,155,35])  # not hovering around button
         
         # Board Hazards
         text_generator("Board Hazards", 50, 700, 32)
+        image_generator("IMGBIN_black-hole-car-png_m5tXVZXp.png", 300, 800)
         text_generator("Blackhole - Ball is sucked in, and ejected at a random speed and direction", 300, 800, 16)
-        text_generator("Start Game", screen_width - 190, screen_height - 20, 24)
+        text_generator("Start Game", 950, 70, 24)
         
         pygame.display.update()
 
