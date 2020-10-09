@@ -2,7 +2,7 @@ import pygame, sys, random
 
 def ball_animation():
 
-    global ball_speed_x, ball_speed_y, player_score, opponent_score, ballX, ballY
+    global ball_speed_x, ball_speed_y, player_score, opponent_score, ballX, ballY, ball_move
     
     #Game Logic
     ball.x += ball_speed_x
@@ -32,7 +32,13 @@ def ball_animation():
     #Ball Collision (Player)    
     if ball.colliderect(player) or ball.colliderect(opponent):
         pygame.mixer.Sound.play(pong_sound) #play the pong sound
+        ball_move = True
         ball_speed_x *= -1 #reverse direction
+
+    # Blackhole interaction
+    if ball.colliderect(hole) and ball_move:
+        ball_move = False
+        ball_restart()
 
 def player_animation():
     global rPaddleY
@@ -61,7 +67,7 @@ def opponent_animation():
         lPaddleY = opponent.top
 
 def opponent_ai():
-    global lPaddleY, p2_pwrupReady, p2_used_pwrup
+    global lPaddleY, p2_pwrupReady, p2_used_pwrup,ball_move
 
     if opponent.top < ball.y:
         opponent.y += opponent_ai_speed
@@ -84,6 +90,8 @@ def opponent_ai():
 
 def ball_restart():
     global ball_speed_x, ball_speed_y, ballX, ballY
+
+    game_start = False
 
     #move ball to center
     ball.center = (screen_width/2, screen_height/2)
@@ -152,11 +160,13 @@ pygame.display.set_caption('Pong')
 ball = pygame.Rect(screen_width / 2 - 15, screen_height / 2 - 15, 30, 30)
 player = pygame.Rect(screen_width - 20, screen_height / 2- 70, 10, 140)
 opponent = pygame.Rect(10, screen_height / 2 - 70, 10, 140)
+hole = pygame.Rect(screen_width / 2 - 60, screen_height / 2 - 60, 120, 120)
 
 #Colours
 white = (255,255,255)
 light_grey = (200,200,200)
 light_blue = (68,85,90)
+black = (0,0,0)
 bg_color = pygame.Color('grey12')
 t_color = pygame.Color('grey12')
 
@@ -167,6 +177,7 @@ ball_speed_y = 7
 player_speed = 0 #if not pressing a key, player stands still
 opponent_speed = 0
 opponent_ai_speed = 7
+ball_move = False
 
 # Ball (VISUAL)
 ballImg = pygame.image.load("./media/ball.png")
@@ -304,6 +315,7 @@ while True:
     #pygame.draw.rect(screen, light_grey, player)
     #pygame.draw.rect(screen, light_grey, opponent)
     #pygame.draw.ellipse(screen, light_grey, ball)
+    pygame.draw.ellipse(screen, black, hole)
     pygame.draw.aaline(screen, light_grey, (screen_width / 2, 0), (screen_width / 2, screen_height))
     pwrup_ready()
 
