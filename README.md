@@ -14,4 +14,4 @@
 * <a target="_blank" href="https://icons8.com/icons/set/page-up-button--v2">Page Up Button icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 * <a target="_blank" href="https://icons8.com/icons/set/space-key">Space Key icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 * <a target="_blank" href="https://icons8.com/icons/set/0-key">0 Key icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-<a target="_blank" href="https://icons8.com/icons/set/360-degrees">360 Degrees icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+* <a target="_blank" href="https://icons8.com/icons/set/360-degrees">360 Degrees icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
