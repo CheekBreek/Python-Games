@@ -15,7 +15,7 @@ pygame.display.set_caption('Pong')
 
 # Colors
 light_grey = (200, 200, 200)
-red = (200,0,0)
+black = (0,0,0)
 bg_color = pygame.Color('grey12')
 
 # Game Rectangles
@@ -140,7 +140,7 @@ if __name__ == "__main__":
 
         # Visuals
         screen.fill(bg_color)
-        pygame.draw.ellipse(screen, red, hole)
+        pygame.draw.ellipse(screen, black, hole)
         pygame.draw.rect(screen, light_grey, player)
         pygame.draw.rect(screen, light_grey, opponent)
         pygame.draw.ellipse(screen, light_grey, ball)
