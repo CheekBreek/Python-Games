@@ -20,6 +20,16 @@
    * If ball contacts it will be launched in random direction
    * This adds another strategy aspect to the game
    
+* Multiplayer
+   * Allows two players to place at once
+   * Player One uses arrow keys to move
+   * Player Two uses W and S to move
+   * Games are more fun with friends! 
+   
+* Title Screen
+   * Allows the user to get ready before playing
+   * Allows the user to select One or Two player mode
+   
 ## Icon Reference
 * <a target="_blank" href="https://icons8.com/icons/set/w-key">W Key icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 * <a target="_blank" href="https://icons8.com/icons/set/s-key">S Key icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
