@@ -15,6 +15,11 @@
    * for wasd side use spacebar to activate power up
    * for arrows side use 0 on numpad to activate power up
    
+* Game Modification: Board hazard
+   *Black hole: hazard added to middle of the board
+   *If ball contacts it will be launched in random direction
+   *This adds another strategy aspect to the game
+   
 ## Icon Reference
 * <a target="_blank" href="https://icons8.com/icons/set/w-key">W Key icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 * <a target="_blank" href="https://icons8.com/icons/set/s-key">S Key icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
