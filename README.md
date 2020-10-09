@@ -7,10 +7,10 @@
         * An image of the feature
         * A description of the feature, how it works.
 * Power UP
-   Each player has an ability to increase their boards for 4 seconds
-   There's a cooldown on this skill, in this case it's only 8 seconds for quick demonstration purposes
-   for wasd side use spacebar to activate power up
-   for arrows side use 0 on numpad to activate power up
+   * Each player has an ability to increase their boards for 4 seconds
+   * There's a cooldown on this skill, in this case it's only 8 seconds for quick demonstration purposes
+   * for wasd side use spacebar to activate power up
+   * for arrows side use 0 on numpad to activate power up
    
 ## Icon Reference
 * <a target="_blank" href="https://icons8.com/icons/set/w-key">W Key icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
