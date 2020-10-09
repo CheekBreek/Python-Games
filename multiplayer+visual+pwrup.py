@@ -146,6 +146,24 @@ def p2_pwrup():
         opponent.height += 160
         lPaddleImg = pygame.transform.scale(lPaddleImg, (10, 300))
 
+# Generates Texts 
+def text_generator(text, x, y, fontSize):
+    font = pygame.font.Font("freesansbold.ttf", fontSize)
+    text1 = font.render(text, False, white, t_color)
+
+    # Centering/Aligning the Text
+    text1_width = text1.get_width()
+    text1_height = text1.get_height()
+    textRect = text1.get_rect()
+    textRect.center = (x + text1_width / 2, y - text1_height / 2)
+
+    screen.blit(text1, textRect)
+
+# Generates Images
+def image_generator(filename, x, y):
+    image = pygame.image.load(f'./media/{filename}')
+    screen.blit(image, (x,y))
+
 # General setup
 pygame.init()
 clock = pygame.time.Clock()
@@ -169,7 +187,6 @@ light_blue = (68,85,90)
 black = (0,0,0)
 bg_color = pygame.Color('grey12')
 t_color = pygame.Color('grey12')
-
 
 # Game Variables
 ball_speed_x = 7
@@ -205,6 +222,7 @@ p2_pwrup_delay = 0
 # Title Variables
 multiplayer = False
 title = True
+tutorial = False
 
 # Score Text
 player_score = 0
@@ -214,7 +232,6 @@ basic_font = pygame.font.Font('freesansbold.ttf', 32)
 # Sound
 pong_sound = pygame.mixer.Sound("./media/pong.ogg") #in the media folder
 score_sound = pygame.mixer.Sound("./media/score.ogg") #in the media folder
-
 
 while True and title == True:
     for event in pygame.event.get():
@@ -233,7 +250,8 @@ while True and title == True:
 
             if event.key == pygame.K_RETURN:
                 title = False
-
+                tutorial = True
+                
     screen.fill(t_color)
 
     titleFont = basic_font.render("PONG", False, white)
@@ -253,6 +271,59 @@ while True and title == True:
 
     pygame.display.flip()
     clock.tick(60)
+
+while True and tutorial == True:    
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit
+            if event.type == pygame.MOUSEBUTTONDOWN: # click "Start Game" button
+                if 950 <= mouse[0] <= 1083 and 50 <= mouse [1] <= 75:
+                    tutorial = False # Game is started
+                
+        screen.fill(bg_color)
+        
+        # Controls
+        text_generator("Controls", 50, 50, 32)
+
+        # Player 1
+        text_generator("Player 1", 100, 90, 24)
+        image_generator("icons8-w-key-96.png", 150, 100)
+        image_generator("icons8-s-key-96.png", 150, 200)
+        image_generator("icons8-space-key-96.png", 150, 300)
+        text_generator("Up", 300, 170, 20)
+        text_generator("Down", 300, 270, 20)
+        text_generator("Power Up", 300, 370, 20)
+
+        if multiplayer == True:
+            # Player 2
+            text_generator("Player 2", screen_width / 2 + 10, 90, 24)
+            image_generator("icons8-page-up-button-96.png", screen_width / 2 + 60, 100)
+            image_generator("icons8-page-down-button-96.png", screen_width / 2 + 60, 200)
+            image_generator("icons8-0-key-96.png", screen_width / 2 + 60, 300)
+            text_generator("Up", screen_width / 2 + 210, 170, 20)
+            text_generator("Down", screen_width / 2 + 210, 270, 20)
+            text_generator("Power Up (Keypad 0)", screen_width / 2 + 210, 370, 20)
+        
+        # PowerUps
+        text_generator("Power Ups", 50, 450, 32)
+        image_generator("pwrup.png", 150, 550)
+        text_generator("Power UP - Paddle gets larger", 300, 550, 16)
+        
+        # Mouse
+        mouse = pygame.mouse.get_pos()
+        if 950 <= mouse[0] <= 1083 and 50 <= mouse[1] <= 75: 
+            pygame.draw.rect(screen,(white),[940,40,160,35])   # hovering around button
+        else: 
+            pygame.draw.rect(screen,(t_color),[940,40,160,35])  # not hovering around button
+        
+        # Board Hazards
+        text_generator("Board Hazards", 50, 700, 32)
+        image_generator("icons8-360-degrees-100.png", 300, 750)
+        text_generator("Blackhole - Ball is sucked in, and ejected at a random speed and direction", 300, 800, 16)
+        text_generator("Click to Start", 945, 70, 24)
+        
+        pygame.display.update()
 
 while True:
     for event in pygame.event.get():
@@ -284,7 +355,7 @@ while True:
                 p2_pwrup()
                 p2_pwrupReady = False
                 p2_used_pwrup = pygame.time.get_ticks()
-       
+    
         if event.type == pygame.KEYUP: #key unpressed
             if event.key == pygame.K_UP: #up key
                 player_speed += 6
@@ -295,10 +366,7 @@ while True:
                 opponent_speed += 6
             if event.key == pygame.K_s and multiplayer == True: #s key
                 opponent_speed -= 6
-    
-    
-
-
+   
     ball_animation()
     player_animation()
     pwrup_check()
@@ -329,7 +397,6 @@ while True:
 
     opponent_text = basic_font.render(f'{opponent_score}', False, light_grey)
     screen.blit(opponent_text,(600,470)) #blit puts one surface on another
-
 
     #Loop Timer
     pygame.display.flip()
