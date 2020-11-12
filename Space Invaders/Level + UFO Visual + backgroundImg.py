@@ -151,10 +151,10 @@ while running:
 
         enemyX[i] += enemyX_change[i]
         if enemyX[i] <= 0:
-            enemyX_change[i] = 2
+            enemyX_change[i] = 2 + curr_level
             enemyY[i] += enemyY_change[i]
         elif enemyX[i] >= 736:
-            enemyX_change[i] = -2
+            enemyX_change[i] = -2 - curr_level
             enemyY[i] += enemyY_change[i]
 
         collision = isCollision(enemyX[i], enemyY[i], bulletX, bulletY)
