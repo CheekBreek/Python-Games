@@ -15,6 +15,8 @@ background = [pygame.image.load("./media/background1.jpg"),
 # Level
 curr_level = 0
 
+# Change backgound between levels
+
 
 def display_background():
     screen.blit(background[curr_level], (0, 0))
@@ -151,9 +153,11 @@ while running:
 
         enemyX[i] += enemyX_change[i]
         if enemyX[i] <= 0:
+            # Change enemy speed between levels
             enemyX_change[i] = 2 + curr_level
             enemyY[i] += enemyY_change[i]
         elif enemyX[i] >= 736:
+            # Change enemy speed between levels
             enemyX_change[i] = -2 - curr_level
             enemyY[i] += enemyY_change[i]
 
