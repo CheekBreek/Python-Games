@@ -17,7 +17,7 @@ exitgame = False
 white = (255, 255, 255)
 light_grey = (200, 200, 200)
 light_blue = (68, 85, 90)
-gold = (255,215,0)
+gold = (255, 215, 0)
 bg_color = pygame.Color('grey12')
 t_color = pygame.Color('grey12')
 
@@ -74,11 +74,6 @@ victory_font = pygame.font.Font("./fonts/Square.ttf", 90)
 game_over_font = pygame.font.Font("./fonts/Square.ttf", 128)
 
 
-
-
-
-
-
 def show_score(x, y):
     score = font.render("Score: "+str(score_value), True, (255, 255, 255))
     screen.blit(score, (x, y))
@@ -133,7 +128,8 @@ def victory():  # display the victory screen
         titleFont = victory_font.render("VICTORY", False, white)
         screen.blit(titleFont, (240, 200))  # blit puts one surface on another
 
-        saved = font.render("Earth has been saved! You have defeated the alien threat!", False, white)
+        saved = font.render(
+            "Earth has been saved! You have defeated the alien threat!", False, white)
         screen.blit(saved, (50, 450))  # blit puts one surface on another
 
         pygame.display.update()
@@ -160,9 +156,9 @@ while running:
 
             if event.key == pygame.K_RETURN:
                 if exitgame == True:
-                     pygame.quit()
-                     sys.exit()
-                    
+                    pygame.quit()
+                    sys.exit()
+
                 title = False
 
         screen.fill((0, 0, 0))
