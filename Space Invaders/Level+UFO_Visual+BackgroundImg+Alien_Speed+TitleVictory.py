@@ -337,17 +337,17 @@ while True:
 
     pygame.display.update()
 
-    if score_value < 1:
+    if score_value < 10:
         game_state.level_one()
 
-    elif score_value >=3:
+    elif score_value >= 30:
         victory()
-    elif score_value >= 2:
+    elif score_value >= 10:
         enemyImg.clear()
         for i in range(num_enemies):
             enemyImg.append(pygame.image.load("./media/ufo2.png"))
         game_state.level_two()
-    elif score_value >= 1:
+    elif score_value >= 20:
         enemyImg.clear()
         for i in range(num_enemies):
             enemyImg.append(pygame.image.load("./media/ufo3.png"))
