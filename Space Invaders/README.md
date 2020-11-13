@@ -2,13 +2,17 @@
 ## Background 1: https://www.wallpaperflare.com/star-celestial-body-space-astrology-galax-light-fantasy-wallpaper-pushh/download/1920x1080
 ## Background 2: https://www.wallpaperflare.com/galaxy-wall-paper-green-stars-space-ngc-3190-star-space-wallpaper-psvws/download/1920x1080
 ## Background 3: https://www.wallpaperflare.com/nebula-wallpaper-milky-way-digital-wallpaper-space-stars-tylercreatesworlds-wallpaper-w/download/1920x1080
+## SpaceWin Credit: https://wallpaperscraft.com/download/earth_sun_planet_surface_stars_99478/800x600
+## Spacetitle Credit: https://wallpaperscraft.com/download/galaxy_universe_space_138271/800x600
 
 # Background Music
 ## Background 0 Credit https://freesound.org/s/360740/
 ## Background 1 Credit https://freesound.org/s/250856/
 ## Background 2 Credit https://freesound.org/s/382250/
+## FFWin: Credit: https://www.youtube.com/watch?v=QEmbOL3AAEs&ab_channel=CalcAzn
 
 # Laser Sounds 
 ## Laser 0 Credit https://freesound.org/s/221560/
 ## Laser 1 Credit https://freesound.org/s/376694/
 ## Laser 2 Credit https://freesound.org/s/317136/
+
