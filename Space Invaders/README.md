@@ -11,6 +11,6 @@
 ## FFWin: Credit: https://www.youtube.com/watch?v=QEmbOL3AAEs&ab_channel=CalcAzn
 
 # Laser Sounds 
-## Laser 0 Credit: https://freesound.org/s/221560/
-## Laser 1 Credit: https://freesound.org/s/376694/
-## Laser 2 Credit: https://freesound.org/s/317136/
+## Laser 1 Credit: https://freesound.org/s/221560/
+## Laser 2 Credit: https://freesound.org/s/376694/
+## Laser 3 Credit: https://freesound.org/s/317136/
