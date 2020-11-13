@@ -1,3 +1,11 @@
+# Game Mods
+## Spaceship Visuals
+### Different Spaceships or Player Img for each level
+### First Player Img is the given or default image
+
+## Bullet Firing Sounds
+### Different Bullet Firing Sounds for each level
+
 # Image Credits:
 ## Background 1: https://www.wallpaperflare.com/star-celestial-body-space-astrology-galax-light-fantasy-wallpaper-pushh/download/1920x1080
 ## Background 2: https://www.wallpaperflare.com/galaxy-wall-paper-green-stars-space-ngc-3190-star-space-wallpaper-psvws/download/1920x1080
