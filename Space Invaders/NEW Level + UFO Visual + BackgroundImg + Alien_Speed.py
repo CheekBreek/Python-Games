@@ -15,6 +15,8 @@ background = pygame.image.load("./media/stars.png")
 pygame.mixer.music.load("./media/background.wav")
 pygame.mixer.music.play(-1)
 """
+win_sound = pygame.mixer.Sound("./media/win.wav")
+
 # Player
 playerImg = pygame.image.load("./media/spaceship.png")
 playerX = 370
@@ -29,6 +31,7 @@ enemyX_change = []
 enemyY_change = []
 num_enemies = 6
 enemy_speed_change = 0
+pointsPer = 1
 
 for i in range(num_enemies):
     enemyImg.append(pygame.image.load("./media/ufo1.png"))
@@ -95,9 +98,9 @@ def game_over():  # display the game over text
 class GameState():
     def __init__(self):
         self.state = 'level_one'
-
+        
     def level_one(self):
-        global playerX, playerX_change, bulletX, bulletY, bullet_state, score_value, background
+        global playerX, playerX_change, bulletX, bulletY, bullet_state, score_value, background, pointsPer
 
         # Change background for lvl 1
         background = pygame.image.load("./media/background1.jpg")
@@ -126,10 +129,12 @@ class GameState():
                     playerX_change = 0
 
     def level_two(self):
-        global playerX, playerX_change, bulletX, bulletY, bullet_state, score_value, background, enemy_speed_change
-
-        # Change alien speed
+        global playerX, playerX_change, bulletX, bulletY, bullet_state, score_value, background, enemy_speed_change, pointsPer
+        
+        # Change alien speed + point value
         enemy_speed_change = 1
+        pointsPer = 3
+        
 
         # Change background for lvl 2
         background = pygame.image.load("./media/background2.jpg")
@@ -158,10 +163,12 @@ class GameState():
                     playerX_change = 0
 
     def level_three(self):
-        global playerX, playerX_change, bulletX, bulletY, bullet_state, score_value, background, enemy_speed_change
+        global playerX, playerX_change, bulletX, bulletY, bullet_state, score_value, background, enemy_speed_change, pointsPer
 
         # Change alien speed
         enemy_speed_change = 2
+        pointsPer = 5
+        
 
         # Change background for lvl 3
         background = pygame.image.load("./media/background3.jpg")
@@ -191,7 +198,6 @@ class GameState():
 
 
 game_state = GameState()
-
 # Game Loop
 running = True
 while True:
@@ -228,7 +234,7 @@ while True:
             explosion_sound.play()
             bulletY = 480
             bullet_state = "ready"
-            score_value += 1
+            score_value += pointsPer
             enemyX[i] = random.randint(50, 750)
             enemyY[i] = random.randint(50, 150)
 
@@ -248,14 +254,18 @@ while True:
 
     pygame.display.update()
 
+    
+    #Level States
     if score_value < 10:
         game_state.level_one()
-    elif score_value >= 20:
+    elif score_value >= 10 and score_value < 20:
+        
         enemyImg.clear()
         for i in range(num_enemies):
             enemyImg.append(pygame.image.load("./media/ufo2.png"))
         game_state.level_two()
-    elif score_value >= 10:
+    elif score_value >= 20:
+        
         enemyImg.clear()
         for i in range(num_enemies):
             enemyImg.append(pygame.image.load("./media/ufo3.png"))
