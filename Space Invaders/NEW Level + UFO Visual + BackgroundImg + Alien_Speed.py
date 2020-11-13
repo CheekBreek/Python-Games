@@ -10,11 +10,11 @@ pygame.display.set_caption("Space Invaders")
 
 # Background
 background = pygame.image.load("./media/stars.png")
-
+"""
 # Sound
 pygame.mixer.music.load("./media/background.wav")
 pygame.mixer.music.play(-1)
-
+"""
 # Player
 playerImg = pygame.image.load("./media/spaceship.png")
 playerX = 370
