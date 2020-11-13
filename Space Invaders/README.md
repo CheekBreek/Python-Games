@@ -9,6 +9,11 @@
 ## Alien movement speed
 ### Alien's speed change every level
 
+## Alien UFO Visuals
+### Different UFO image is given for each level
+
+### Different Bullet Firing Sounds for each level
+
 ## Bullet Firing Sounds
 ### Different Bullet Firing Sounds for each level
 
