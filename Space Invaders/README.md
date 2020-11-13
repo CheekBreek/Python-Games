@@ -2,7 +2,12 @@
 ## Spaceship Visuals
 ### Different Spaceships or Player Img for each level
 ### First Player Img is the given or default image
-### Background change and Alien's speed change per level
+
+## Background Image
+### Different Backgrounds every level
+
+## Alien movement speed
+### Alien's speed change every level
 
 ## Bullet Firing Sounds
 ### Different Bullet Firing Sounds for each level
