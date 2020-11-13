@@ -171,7 +171,7 @@ class GameState():
 
                 if event.key == pygame.K_SPACE:
                     if bullet_state is "ready":
-                        bullet_sounds(1)
+                        bullet_sounds(0)
                         bulletX = playerX
                         fire_bullet(bulletX, bulletY)
 
@@ -205,7 +205,7 @@ class GameState():
 
                 if event.key == pygame.K_SPACE:
                     if bullet_state is "ready":
-                        bullet_sounds(2)
+                        bullet_sounds(1)
                         bulletX = playerX
                         fire_bullet(bulletX, bulletY)
 
@@ -239,7 +239,7 @@ class GameState():
 
                 if event.key == pygame.K_SPACE:
                     if bullet_state is "ready":
-                        bullet_sounds(3)
+                        bullet_sounds(2)
                         bulletX = playerX
                         fire_bullet(bulletX, bulletY)
 
