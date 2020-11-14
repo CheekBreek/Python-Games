@@ -16,5 +16,9 @@
 ## Laser 1 Credit: https://freesound.org/s/376694/
 ## Laser 2 Credit: https://freesound.org/s/317136/
 
-# Win Sound : http://soundbible.com/1003-Ta-Da.html
 
+* Bonus Points For Beating Level
+   * Reward consecutive enemies destroyed with bonus insentive
+
+* Increase Enemy Point Value
+   * Reward players who can make it to higher levels
