@@ -23,6 +23,12 @@
 ## Victory Screen
 ### Rewards the player with a victory screen and jingle if they beat the game (score 30 points).
 
+## Bonus Points For Beating Level
+### Reward consecutive enemies destroyed with bonus insentive
+
+## Increase Enemy Point Value
+### Reward players who can make it to higher levels
+
 # Image Credits:
 ## Background 1: https://www.wallpaperflare.com/star-celestial-body-space-astrology-galax-light-fantasy-wallpaper-pushh/download/1920x1080
 ## Background 2: https://www.wallpaperflare.com/galaxy-wall-paper-green-stars-space-ngc-3190-star-space-wallpaper-psvws/download/1920x1080
