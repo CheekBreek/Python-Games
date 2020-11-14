@@ -22,7 +22,7 @@
 ### Rewards the player with a victory screen and jingle if they beat the game (score 140 points).
 
 ## Bonus Points For Beating Level
-### Reward consecutive enemies destroyed with bonus insentive
+### Reward consecutive enemies destroyed with bonus incentive
 
 ## Increase Enemy Point Value
 ### Reward players who can make it to higher levels
